@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "usuario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Cedula": {
+      "type": "biginteger"
+    },
+    "Correo": {
+      "type": "email"
+    },
+    "Nombre": {
+      "type": "string"
+    }
+  }
+}

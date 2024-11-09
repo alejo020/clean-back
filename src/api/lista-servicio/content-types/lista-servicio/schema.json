@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lista_servicios",
+  "info": {
+    "singularName": "lista-servicio",
+    "pluralName": "lista-servicios",
+    "displayName": "lista-servicio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo_servicio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tipo-servicio.tipo-servicio"
+    }
+  }
+}

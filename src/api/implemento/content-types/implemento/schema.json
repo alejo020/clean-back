@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "implementos",
+  "info": {
+    "singularName": "implemento",
+    "pluralName": "implementos",
+    "displayName": "Implemento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Implemento": {
+      "type": "string"
+    }
+  }
+}

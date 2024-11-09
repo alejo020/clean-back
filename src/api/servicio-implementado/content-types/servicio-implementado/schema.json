@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicio_implementados",
+  "info": {
+    "singularName": "servicio-implementado",
+    "pluralName": "servicio-implementados",
+    "displayName": "Servicio_Implementado"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "implemento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::implemento.implemento"
+    },
+    "servicio": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::servicio.servicio"
+    }
+  }
+}
