@@ -4,7 +4,8 @@
   "info": {
     "singularName": "servicio-implementado",
     "pluralName": "servicio-implementados",
-    "displayName": "Servicio_Implementado"
+    "displayName": "Servicio_Implementado",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::servicio.servicio"
+    },
+    "cantidad": {
+      "type": "integer"
     }
   }
 }

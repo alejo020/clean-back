@@ -492,6 +492,7 @@ export interface ApiServicioImplementadoServicioImplementado
   extends Struct.CollectionTypeSchema {
   collectionName: 'servicio_implementados';
   info: {
+    description: '';
     displayName: 'Servicio_Implementado';
     pluralName: 'servicio-implementados';
     singularName: 'servicio-implementado';
@@ -500,6 +501,7 @@ export interface ApiServicioImplementadoServicioImplementado
     draftAndPublish: true;
   };
   attributes: {
+    cantidad: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
