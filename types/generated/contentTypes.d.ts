@@ -602,6 +602,7 @@ export interface ApiUsuarioUsuario extends Struct.CollectionTypeSchema {
   };
   attributes: {
     Cedula: Schema.Attribute.BigInteger;
+    contrasena: Schema.Attribute.Password;
     Correo: Schema.Attribute.Email;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -617,6 +618,7 @@ export interface ApiUsuarioUsuario extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    usuario: Schema.Attribute.String;
   };
 }
 

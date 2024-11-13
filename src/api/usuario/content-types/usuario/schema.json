@@ -20,6 +20,13 @@
     },
     "Nombre": {
       "type": "string"
+    },
+    "usuario": {
+      "type": "string"
+    },
+    "contrasena": {
+      "type": "password",
+      "required": false
     }
   }
 }
