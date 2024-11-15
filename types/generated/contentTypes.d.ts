@@ -478,6 +478,7 @@ export interface ApiListaServicioListaServicio
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    servicio: Schema.Attribute.Relation<'manyToOne', 'api::servicio.servicio'>;
     tipo_servicio: Schema.Attribute.Relation<
       'oneToOne',
       'api::tipo-servicio.tipo-servicio'
@@ -493,7 +494,7 @@ export interface ApiServicioImplementadoServicioImplementado
   collectionName: 'servicio_implementados';
   info: {
     description: '';
-    displayName: 'Servicio_Implementado';
+    displayName: 'Servicio_Implemento';
     pluralName: 'servicio-implementados';
     singularName: 'servicio-implementado';
   };
@@ -541,8 +542,8 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Descripcion: Schema.Attribute.Text;
     Direccion: Schema.Attribute.String;
-    lista_servicio: Schema.Attribute.Relation<
-      'oneToOne',
+    lista_servicios: Schema.Attribute.Relation<
+      'oneToMany',
       'api::lista-servicio.lista-servicio'
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -552,6 +553,7 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    realizado: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

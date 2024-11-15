@@ -33,10 +33,15 @@
       "relation": "oneToOne",
       "target": "api::zona.zona"
     },
-    "lista_servicio": {
+    "lista_servicios": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::lista-servicio.lista-servicio"
+      "relation": "oneToMany",
+      "target": "api::lista-servicio.lista-servicio",
+      "mappedBy": "servicio"
+    },
+    "realizado": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

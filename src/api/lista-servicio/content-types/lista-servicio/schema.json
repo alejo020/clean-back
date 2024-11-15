@@ -16,6 +16,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::tipo-servicio.tipo-servicio"
+    },
+    "servicio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::servicio.servicio",
+      "inversedBy": "lista_servicios"
     }
   }
 }
