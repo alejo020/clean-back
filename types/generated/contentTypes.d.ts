@@ -400,6 +400,7 @@ export interface ApiCiudadCiudad extends Struct.CollectionTypeSchema {
 export interface ApiClienteCliente extends Struct.CollectionTypeSchema {
   collectionName: 'clientes';
   info: {
+    description: '';
     displayName: 'cliente';
     pluralName: 'clientes';
     singularName: 'cliente';
@@ -413,12 +414,14 @@ export interface ApiClienteCliente extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Direccion: Schema.Attribute.String;
+    latitud: Schema.Attribute.Float;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::cliente.cliente'
     > &
       Schema.Attribute.Private;
+    longitud: Schema.Attribute.Float;
     nombre: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
